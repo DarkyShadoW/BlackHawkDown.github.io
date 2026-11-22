@@ -201,6 +201,10 @@
     <div id="mpLoading" class="mp-loading" hidden>Desplegando el plano…</div></div>
   <span class="mp-hint">Arrastra para moverte · pellizca o usa la rueda para ampliar · toca un punto para llevar la cámara allí</span>
 </div>
+<div id="swWarn" role="alert" hidden>
+  <div class="sw-txt"><strong>Aceleración gráfica desactivada</strong><span>El navegador está renderizando por software (CPU), lo que reduce mucho el rendimiento. Activa la aceleración de gráficos en los ajustes del navegador y reinícialo.</span></div>
+  <button id="swWarnClose" type="button" title="Cerrar" aria-label="Cerrar">&times;</button>
+</div>
 
   <script defer src="js/vendor/three.min.js"></script>
   <script defer src="js/data/sfx-meta.js"></script>

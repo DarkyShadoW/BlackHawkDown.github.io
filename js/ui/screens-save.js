@@ -185,6 +185,9 @@ $('opFps').onclick = () => { OPT.fps = !OPT.fps; const el = $('fpsC'); if (el) e
 { const el = document.createElement('div'); el.id = 'fpsC'; el.hidden = true;
   el.style.cssText = 'position:fixed;left:50%;top:calc(env(safe-area-inset-top, 0px) + 3px);transform:translateX(-50%);z-index:60;pointer-events:none;font:600 11px/1.3 ui-monospace,Menlo,Consolas,monospace;color:#f2ead8;background:rgba(0,0,0,.42);padding:1px 7px;border-radius:4px;letter-spacing:.04em';
   document.body.appendChild(el); }
+{ const w = $('swWarn'), c = $('swWarnClose');
+  if (w && SW_RENDERER){ w.hidden = false; }
+  if (c) c.onclick = e => { e.stopPropagation(); w.hidden = true; }; }
 applyGfx();
 
 /* pause menu during a mission */

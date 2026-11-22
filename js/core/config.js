@@ -26,6 +26,14 @@ renderer.setPixelRatio(1);
 renderer.shadowMap.enabled = true;
 renderer.shadowMap.type = Math.min(innerWidth, innerHeight) < 700 ? T.PCFShadowMap : T.PCFSoftShadowMap;
 renderer.shadowMap.autoUpdate = false;   // shadows are redrawn only when something has moved (shadowFrame)
+/* detect CPU/software WebGL renderers (e.g. SwiftShader or Basic Render Driver when hardware acceleration is off) */
+const SW_RENDERER = (() => {
+  try {
+    const gl = renderer.getContext(), ext = gl.getExtension('WEBGL_debug_renderer_info');
+    const r = String((ext && gl.getParameter(ext.UNMASKED_RENDERER_WEBGL)) || gl.getParameter(gl.RENDERER) || '');
+    return /swiftshader|llvmpipe|softpipe|software|basic render driver|mesa offscreen|lavapipe|\bwarp\b/i.test(r) ? r : '';
+  } catch (e) { return ''; }
+})();
 /* graphics presets: how many lights the shaders loop over, the shadow map, how soon models drop to their lighter versions,
    which small things throw a shadow, and how often men far off or out of view are animated */
 const GFXQ = {
