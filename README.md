@@ -1,7 +1,7 @@
 #  Black Hawk Down
 
 Juego táctico en tiempo real con pausa sobre la batalla de Mogadiscio del 3 y 4 de octubre de 1993.
-Lo hago yo, Jesús Navas Aller, bajo el nombre de **Épsilon Games Studio**.
+Autor, Jesús Navas Aller, bajo el nombre de **Épsilon Games Studio**.
 
 Mandas a los Rangers y a los Delta calle a calle: los mueves por puntos, los pones a cubierto, pides
 pasadas de Little Bird, cargas con los heridos y, si hace falta, con los muertos, porque aquí no se deja
