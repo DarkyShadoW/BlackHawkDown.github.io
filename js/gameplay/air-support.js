@@ -1,5 +1,5 @@
 "use strict";
-/* ---------- uploaded models: the AH-6 Little Bird and the Hercules (base64 geometry + texture next to the page; glTF uvs, origin top-left) ---------- */
+/* ---------- external 3D models: binary HELI geometry (assets/models/world/*.bin) + textures (assets/textures/models/*.png); glTF uvs, origin top-left ---------- */
 const LB_HUB = [.0372, 2.7509, -.9839], LB_TAIL = [.0405, 1.5415, -6.6042];
 const MODELS = {};
 function loadModel(name, prep, texPrep){

@@ -4,8 +4,8 @@
    duller, later and wetter: each sound goes through a low-pass that closes with distance, is panned by where it is on the screen
    and sends a share to an echo made for a street between walls. Impacts are built by material. Rotors, engines, tyres and the
    rotor wash are loops whose level and pitch follow what is near the camera.
-   Real recordings: if a folder 'sounds' beside the page holds files with the names in SND_NAMES (all .mp3, .ogg or .wav; variants
-   as name_2, name_3), they are loaded and used in place of the built sounds. ---------- */
+   Real recordings: loaded asynchronously from assets/audio/sfx/*.mp3 using metadata in js/data/sfx-meta.js (window.__SNDB),
+   falling back to procedural Web Audio synthesis while loading or if unavailable. ---------- */
 let SND = null, SMP = {}, sndTried = false, washLvl = 0;
 const SND_NAMES = ['m16', 'car15', 'saw', 'dmr', 'ak47', 'm2', 'pistol', 'whiz', 'rpg_launch', 'rpg_blast', 'explosion', 'collapse', 'imp_wall', 'imp_stone', 'imp_sand', 'imp_wood', 'imp_glass', 'imp_metal', 'imp_soft', 'ricochet', 'casing',
   'rotor_bh', 'rotor_lb', 'wash', 'truck', 'tyres'];

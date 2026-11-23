@@ -37,7 +37,7 @@ function fusCol(x,y,z){
   if (y < 1.05) return 0x363b2f;
   return ((Math.floor(z*1.3) + (y > 2.2 ? 1 : 0)) & 1) ? OLV : 0x3a3f32;
 }
-/* Real UH-60 model (uh60.txt = base64 geometry, uh60.png = texture, next to the page), loaded once. Units are metres, nose +z, y up.
+/* Real UH-60 model (assets/models/world/uh60.bin = binary HELI geometry, assets/textures/models/uh60.png = texture), loaded once. Units are metres, nose +z, y up.
    The procedural heli above stays as a fallback until it arrives (or if it can't load). */
 let heliAsset = null;
 const HELI_HUB = [0, 0, 2.296], HELI_TAIL = [-.398, 3.787, -7.589];
