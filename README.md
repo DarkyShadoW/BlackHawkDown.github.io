@@ -3,8 +3,6 @@
 > **Mogadiscio · 3 y 4 de octubre de 1993**  
 > Juego táctico 3D en tiempo real con pausa táctica para navegador web, desarrollado por **Jesús Navas Aller** (*Épsilon Games Studio*).
 
-🌐 **Jugar en el navegador (GitHub Pages):** [https://darkyshadow.github.io/BlackHawkDown.github.io/](https://darkyshadow.github.io/BlackHawkDown.github.io/)
-
 ---
 
 ## 📖 Descripción
