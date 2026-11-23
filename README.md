@@ -3,10 +3,7 @@
 Juego táctico en tiempo real con pausa sobre la batalla de Mogadiscio del 3 y 4 de octubre de 1993.
 Autor, Jesús Navas Aller, bajo el nombre de **Épsilon Games Studio**.
 
-Mandas a los Rangers y a los Delta calle a calle: los mueves por puntos, los pones a cubierto, pides
-pasadas de Little Bird, cargas con los heridos y, si hace falta, con los muertos, porque aquí no se deja
-a nadie atrás. La campaña sigue la cronología real, desde la Operación Irene hasta la Milla, y hay un
-tutorial en la base de la Task Force Ranger para aprender a jugar antes de salir.
+
 
 Se juega en el navegador, tanto en el ordenador como en el móvil en vertical.
 
