@@ -18,7 +18,7 @@ Este proyecto es un juego táctico en tiempo real con pausa sobre la batalla de 
    - Todo el texto visible se escribe en **español**.
    - Si añades o cambias un texto visible, añade su traducción en `src/js/i18n/en-dictionary.js` (o un patrón en `EN_RX` en `src/js/i18n/i18n.js` si lleva números o nombres variables).
    - Nombres de variables y funciones en inglés; comentarios en español.
-   - Formato según `.prettierrc.json` (comillas simples, punto y coma, 120 cols, 2 espacios).
+   - Estilo: comillas simples, punto y coma, 120 columnas, 2 espacios, LF.
 
 ## Estructura de carpetas
 
@@ -27,7 +27,7 @@ Este proyecto es un juego táctico en tiempo real con pausa sobre la batalla de 
 ├── index.html                  ← Entrada real (HTML + orden de CSS y <script defer>)
 ├── .nojekyll                   ← Evita que GitHub Pages procese con Jekyll
 ├── CLAUDE.md                   ← Estas instrucciones
-├── README.md · package.json · .prettierrc.json · .editorconfig
+├── README.md
 ├── docs/
 │   ├── ARQUITECTURA.md         ← Bucle, mundo, unidades, render, guardado
 │   └── RECETAS.md              ← Paso a paso para añadir misiones, modelos, etc.

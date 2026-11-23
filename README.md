@@ -25,8 +25,6 @@ Abre <http://localhost:8000> y a jugar.
 | `python3 tools/smoke_test.py` | Prueba de humo: arranca todas las misiones en Chromium y comprueba que no haya errores |
 | `node tools/verify.mjs a.html b.html` | Compara el árbol sintáctico (AST) de dos versiones |
 
-Si tienes Node, también vale `npm run dev`, `npm run format` y `npm test` (están en `package.json`).
-
 ---
 
 ## Cómo está organizado
@@ -86,7 +84,7 @@ Cada archivo empieza con una cabecera que explica qué hace. Si buscas algo, mir
 
 **Los assets van sueltos en `assets/`.** Modelos (`.heli` + `.png`), texturas, sonidos y vídeos se cargan con `fetch` o por `<audio>`/`<video>` sin bloquear el arranque. Solo las tablas pequeñas de geometría síncrona (`soldados`, `armas-*`, `matas-hierba`) están en `src/data/*.js`.
 
-**Formato.** El código lo formatea Prettier (`.prettierrc.json`) y `.editorconfig` mantiene lo básico en cualquier editor. Nombres de variables y funciones en inglés, comentarios en español.
+**Estilo.** Comillas simples, punto y coma, 2 espacios, LF. Nombres de variables y funciones en inglés, comentarios en español.
 
 ---
 
