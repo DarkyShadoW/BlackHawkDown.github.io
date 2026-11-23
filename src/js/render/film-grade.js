@@ -61,9 +61,17 @@ float vnoise(vec2 p){ vec2 i = floor(p), f = fract(p); f = f*f*(3.0 - 2.0*f);
 float fbm(vec2 p){ float a = 0.5, s = 0.0; for (int k=0;k<4;k++){ s += a*vnoise(p); p = p*2.03 + 7.1; a *= 0.5; } return s; }
 vec3 worldAt(vec2 uv){
   vec2 nd = uv*2.0 - 1.0;
-  if (uHasDepth > .5){ float z = texture2D(tDepth, uv).x; vec4 p = uInvPV * vec4(nd, z*2.0 - 1.0, 1.0); return p.xyz / p.w; }
-  vec4 a = uInvPV * vec4(nd, -1.0, 1.0), b = uInvPV * vec4(nd, 1.0, 1.0); a /= a.w; b /= b.w;
-  return mix(a.xyz, b.xyz, clamp(a.y / max(a.y - b.y, 1e-4), 0.0, 1.0));
+  vec3 res;
+  if (uHasDepth > .5){
+    float z = texture2D(tDepth, uv).x;
+    vec4 p = uInvPV * vec4(nd, z*2.0 - 1.0, 1.0);
+    res = p.xyz / p.w;
+  } else {
+    vec4 a = uInvPV * vec4(nd, -1.0, 1.0), b = uInvPV * vec4(nd, 1.0, 1.0);
+    a /= a.w; b /= b.w;
+    res = mix(a.xyz, b.xyz, clamp(a.y / max(a.y - b.y, 1e-4), 0.0, 1.0));
+  }
+  return res;
 }
 void main(){
   vec3 c = texture2D(tD, vUv).rgb;
