@@ -1,4 +1,3 @@
 src/vendor/
-src/assets/
-static/
-dist/
+src/data/
+assets/
